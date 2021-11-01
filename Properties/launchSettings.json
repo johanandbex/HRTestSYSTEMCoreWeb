@@ -1,0 +1,44 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:54412",
+      "sslPort": 44381
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "VaultUri": "https://hrsystemcorevault.vault.azure.net/",
+        "AZURE_USERNAME": "johanandbex@yahoo.co.uk",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AZURE_TENANT_ID": "f61b9b16-7b69-4610-92be-2d5b1ed4dbb7"
+      }
+    },
+    "HRSystemCore": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "VaultUri": "https://hrsystemcorevault.vault.azure.net/",
+        "AZURE_USERNAME": "johanandbex@yahoo.co.uk",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": "true",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "VaultUri": "https://hrsystemcorevault.vault.azure.net/",
+        "AZURE_USERNAME": "johanandbex@yahoo.co.uk"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}
