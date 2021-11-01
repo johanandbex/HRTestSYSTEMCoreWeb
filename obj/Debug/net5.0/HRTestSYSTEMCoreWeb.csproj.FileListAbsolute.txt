@@ -178,3 +178,4 @@ D:\Users\Johan\MyDocuments\GitHub\HRSystemCore\HRTestSYSTEMCoreWeb\obj\Debug\net
 D:\Users\Johan\MyDocuments\GitHub\HRSystemCore\HRTestSYSTEMCoreWeb\obj\Debug\net5.0\HRTestSYSTEMCoreWeb.pdb
 D:\Users\Johan\MyDocuments\GitHub\HRSystemCore\HRTestSYSTEMCoreWeb\obj\Debug\net5.0\HRTestSYSTEMCoreWeb.genruntimeconfig.cache
 D:\Users\Johan\MyDocuments\GitHub\HRSystemCore\HRTestSYSTEMCoreWeb\obj\Debug\net5.0\HRTestSYSTEMCoreWeb.csproj.CopyComplete
+D:\Users\Johan\MyDocuments\GitHub\HRSystemCore\HRTestSYSTEMCoreWeb\obj\Debug\net5.0\HRTestSYSTEMCoreWeb.csproj.AssemblyReference.cache

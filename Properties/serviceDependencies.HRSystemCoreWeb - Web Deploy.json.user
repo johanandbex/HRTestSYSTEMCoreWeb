@@ -1,43 +1,15 @@
 {
   "dependencies": {
-    "mssql2": {
-      "restored": true,
-      "restoreTime": "2021-10-31T21:22:34.3300608Z"
-    },
     "secrets1": {
       "restored": true,
       "restoreTime": "2021-10-31T21:22:12.294565Z"
-    },
-    "mssql1": {
-      "restored": true,
-      "restoreTime": "2021-10-31T21:22:56.1534284Z"
     }
   },
   "parameters": {
-    "mssql2.subscriptionId": {
-      "Name": "mssql2.subscriptionId",
-      "Type": "subscription",
-      "Value": "f61b9b16-7b69-4610-92be-2d5b1ed4dbb7"
-    },
-    "mssql2.resourceGroupName": {
-      "Name": "mssql2.resourceGroupName",
-      "Type": "resourceGroup",
-      "Value": "JohansResources"
-    },
     "secrets1.resourceGroupName": {
       "Name": "secrets1.resourceGroupName",
       "Type": "resourceGroup",
       "Value": "DefaultResourceGroup-SUK"
-    },
-    "mssql1.subscriptionId": {
-      "Name": "mssql1.subscriptionId",
-      "Type": "subscription",
-      "Value": "f61b9b16-7b69-4610-92be-2d5b1ed4dbb7"
-    },
-    "mssql1.resourceGroupName": {
-      "Name": "mssql1.resourceGroupName",
-      "Type": "resourceGroup",
-      "Value": "JohansResources"
     },
     "secrets1.subscriptionId": {
       "Name": "secrets1.subscriptionId",

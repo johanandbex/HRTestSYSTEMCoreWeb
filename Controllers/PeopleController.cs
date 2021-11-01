@@ -85,10 +85,11 @@ namespace HRSystemCore.Controllers
             }
 
             List<Person> people;
+            string searchstring = searchString;
             using (var httpClient = new HttpClient())
             {
                 
-                using (var response = await httpClient.GetAsync($"{BaseUrl}/People?{pageNumber}&&{sortOrder}&&{currentFilter}&&{searchString}&&{pageSizeStr}"))
+                using (var response = await httpClient.GetAsync($"{BaseUrl}/People?searchstring={searchstring}"))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     people = JsonConvert.DeserializeObject<List<Person>>(apiResponse);

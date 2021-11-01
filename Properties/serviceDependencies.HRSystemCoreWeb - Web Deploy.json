@@ -5,18 +5,6 @@
       "type": "secrets.keyVault",
       "connectionId": "VaultUri",
       "secretStore": "AzureAppSettings"
-    },
-    "mssql2": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/johanssqlserver/databases/hr_test",
-      "type": "mssql.azure",
-      "connectionId": "ConnectionStrings:HRSystemCoreContext",
-      "secretStore": "AzureAppSettings"
-    },
-    "mssql1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/johanssqlserver/databases/hr_test",
-      "type": "mssql.azure",
-      "connectionId": "HR_Test",
-      "secretStore": "AzureAppSettings"
     }
   }
 }

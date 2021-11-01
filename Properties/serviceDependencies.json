@@ -4,14 +4,6 @@
       "type": "secrets",
       "connectionId": "VaultUri"
     },
-    "mssql2": {
-      "type": "mssql",
-      "connectionId": "ConnectionStrings:HRSystemCoreContext"
-    },
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "HR_Test"
-    },
     "secrets2": {
       "type": "secrets",
       "connectionId": "VaultUri"
