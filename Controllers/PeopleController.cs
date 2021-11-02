@@ -4,13 +4,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using HRSystemCore;
 using HRSystemCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace HRSystemCore.Controllers
+namespace HRTestSYSTEMCoreWeb.Controllers
 {
     public class PeopleController : Controller
     {
@@ -52,38 +53,7 @@ namespace HRSystemCore.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-
-            List<Status> myStatus;
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync($"{BaseUrl}/Status"))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    myStatus = JsonConvert.DeserializeObject<List<Status>>(apiResponse);
-                }
-            }
-
-
-            List<Company> myCompanies;
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync($"{BaseUrl}/Companies"))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    myCompanies = JsonConvert.DeserializeObject<List<Company>>(apiResponse);
-                }
-            }
-
-            List<Department> myDepartments;
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync($"{BaseUrl}/Departments"))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    myDepartments = JsonConvert.DeserializeObject<List<Department>>(apiResponse);
-                }
-            }
-
+       
             List<Person> people;
             string searchstring = searchString;
             using (var httpClient = new HttpClient())
@@ -94,21 +64,10 @@ namespace HRSystemCore.Controllers
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     people = JsonConvert.DeserializeObject<List<Person>>(apiResponse);
                 }
-
-                foreach (var pers in people)
-                {
-                    pers.Company = myCompanies.Find(c => c.CompanyId == pers.CompanyId);
-                    pers.Department = myDepartments.Find(c => c.DepartmentId == pers.DepartmentId);
-                    pers.Status = myStatus.Find(c => c.StatusId == pers.StatusId);
-                }
+               
                 
             }
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-              people = people.Where(p => p.Status.Status1.Contains(searchString) || p.Department.DepartmentName.Contains(searchString)).ToList();
-            }
-
+            
             switch (sortOrder)
             {
                 case "name_desc":

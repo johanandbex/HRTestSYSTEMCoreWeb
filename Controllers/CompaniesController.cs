@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace HRSystemCore.Controllers
+namespace HRTestSYSTEMCoreWeb.Controllers
 {
     public class CompaniesController : Controller
     {
@@ -34,21 +34,8 @@ namespace HRSystemCore.Controllers
                     myCompanies = JsonConvert.DeserializeObject<List<Company>>(apiResponse);
                 }
             }
-            List<Region> myRegions;
-            using (var httpSubClient = new HttpClient())
-            {
-                using (var responseSub = await httpSubClient.GetAsync($"{BaseUrl}/Regions"))
-                {
-                    string apiResponseSub = await responseSub.Content.ReadAsStringAsync();
-                    myRegions = JsonConvert.DeserializeObject<List<Region>>(apiResponseSub);
-                }
-            }
 
-            foreach (var cmpny in myCompanies)
-            {
-                cmpny.Region = myRegions.Find(r=>r.RegionId == cmpny.RegionId);
-            }
-            
+          
             return View(myCompanies);
         }
 

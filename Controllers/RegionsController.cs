@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace HRSystemCore.Controllers
+namespace HRTestSYSTEMCoreWeb.Controllers
 {
     public class RegionsController : Controller
     {
